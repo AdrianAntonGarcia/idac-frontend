@@ -1,6 +1,6 @@
-const path = require('path');
+var path = require('path');
 var express = require("express");
-const app = express();
+var app = express();
 app.use(express.static(__dirname+'/dist/idac-frontend'));
 app.get('/',function(req,res){
     res.sendFile(path.join(__dirname+'/dist/idac-frontend/index.html'));
